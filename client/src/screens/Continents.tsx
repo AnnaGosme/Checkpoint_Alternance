@@ -20,10 +20,6 @@ const [continentCode, setContinentCode] = useState("");
     console.log("one continent", continent)
   }
 
-  
-  
-//   const {data: oneContinent} = useGetContinentQuery({variables: {code: continentCode}});
-//   const continent = oneContinent?.continent ?? {};
 
 
 

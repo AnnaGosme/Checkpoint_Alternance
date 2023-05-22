@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Continents />} />
         <Route path="/:continent/countries" element={<Countries />} />
-        <Route path="/countries/:countryName" element={<CountryDetails />} />
+        <Route path="/:continent/countries/:country" element={<CountryDetails />} />
       </Routes>
     </div>
   );
