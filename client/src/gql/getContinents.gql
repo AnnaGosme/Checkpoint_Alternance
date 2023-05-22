@@ -5,7 +5,6 @@ query getContinents{
     countries {
         code
         name
-        emoji
     }
 }
 }

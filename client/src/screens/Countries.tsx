@@ -1,9 +1,5 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import {
-  useGetContinentQuery,
-  useGetCountryQuery,
-} from "../gql/generated/schema";
 
 export default function Countries() {
   const [countryCode, setCountryCode] = useState("");
@@ -18,6 +14,8 @@ export default function Countries() {
   };
 
   return (
+    <>
+    <h1>Pays</h1>
     <ul>
       {countries.map((country: any) => {
         return (
@@ -42,5 +40,6 @@ export default function Countries() {
         );
       })}
     </ul>
+    </>
   );
 }

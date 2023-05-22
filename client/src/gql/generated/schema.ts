@@ -131,14 +131,14 @@ export type GetContinentQuery = { __typename?: 'Query', continent?: { __typename
 export type GetContinentsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetContinentsQuery = { __typename?: 'Query', continents: Array<{ __typename?: 'Continent', code: string, name: string, countries: Array<{ __typename?: 'Country', code: string, name: string, emoji: string }> }> };
+export type GetContinentsQuery = { __typename?: 'Query', continents: Array<{ __typename?: 'Continent', code: string, name: string, countries: Array<{ __typename?: 'Country', code: string, name: string }> }> };
 
 export type GetCountryQueryVariables = Exact<{
   code: Scalars['ID'];
 }>;
 
 
-export type GetCountryQuery = { __typename?: 'Query', country?: { __typename?: 'Country', code: string, emoji: string, name: string } | null };
+export type GetCountryQuery = { __typename?: 'Query', country?: { __typename?: 'Country', code: string, emoji: string, name: string, currency?: string | null, capital?: string | null } | null };
 
 
 export const GetContinentDocument = gql`
@@ -189,7 +189,6 @@ export const GetContinentsDocument = gql`
     countries {
       code
       name
-      emoji
     }
   }
 }
@@ -227,6 +226,8 @@ export const GetCountryDocument = gql`
     code
     emoji
     name
+    currency
+    capital
   }
 }
     `;

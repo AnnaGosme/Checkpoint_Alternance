@@ -14,8 +14,10 @@ export default function CountryDetails() {
 
   return (
     <>
-      <p>{selectedCountry?.name}</p>
+    <h1>Détails sur {selectedCountry?.name}</h1>
       <p>{selectedCountry?.emoji}</p>
+      <p>Capitale: {" "}{selectedCountry?.capital}</p>
+      <p>Monnaie: {" "}{selectedCountry?.currency}</p>
     </>
   );
 }
