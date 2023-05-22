@@ -2,12 +2,14 @@ import { useLocation } from "react-router-dom";
 import { useGetCountryQuery } from "../gql/generated/schema";
 
 export default function CountryDetails() {
+  const location = useLocation();
+
+  const country = location.state.countryCode;
 
   const { data: countryDetails } = useGetCountryQuery({
-    variables: { code: "BF" },
+    variables: { code: country.code },
   });
 
-  //   const country = oneCountry ?? [];
   const selectedCountry = countryDetails?.country;
 
   return (
