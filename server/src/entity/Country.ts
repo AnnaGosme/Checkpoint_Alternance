@@ -1,11 +1,11 @@
 import { Field, InputType, ObjectType } from "type-graphql";
-import { Entity, PrimaryGeneratedColumn, Column, PrimaryColumn } from "typeorm";
+import { Entity, Column, PrimaryColumn } from "typeorm";
 
 @ObjectType()
+@Entity()
 export default class Country {
-  @PrimaryColumn()
   @Field()
-  @Column()
+  @PrimaryColumn()
   code: string;
 
   @Field()
@@ -19,8 +19,8 @@ export default class Country {
 
 @InputType()
 export class CountryInput {
-  @PrimaryColumn()
   @Field()
+  @PrimaryColumn()
   code: string;
 
   @Field()

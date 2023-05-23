@@ -1,6 +1,6 @@
 import { Arg,Mutation, Query, Resolver} from "type-graphql";
 import Country, {CountryInput }from "../entity/Country";
-import datasource from "../db";
+import {datasource} from "../index";
 
 @Resolver(Country)
 export class CountryResolver{

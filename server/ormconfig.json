@@ -1,6 +1,7 @@
 {
     "type": "sqlite",
-    "database": ".src/db.sqlite",
-    "entities": ["./src/models/*.ts"],
+    "database": "./src/db.sqlite",
+    "entities": ["./src/entity/Country.ts"],
+    "autoLoadEntities": true,
     "synchronize": true
   }
